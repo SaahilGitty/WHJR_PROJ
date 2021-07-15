@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use the JS Console</title>
+
+    <style>
+        body {
+            background-color: cadetblue;
+            font-family: Arial;
+            color: white;
+        }
+    </style>
+    <script>
+        function generate() {
+            var charName = prompt("Name of Character")
+            var skillName = prompt("Character's Skill")
+            var bad_skillName = prompt("Character's Weakness")
+            var feeling = prompt("How the character is feeling")
+            var poem = "There was once a character named " + charName + ", who loved to be a" + skillName + ". But they never liked to " + bad_skillName + " and feel " + feeling + " about it."
+            document.getElementById("poem").innerHTML = (poem)
+        }
+    </script>
+</head>
+<body>
+    <h1>Poem Generator</h1>
+    <p id="poem"></p>
+    <button onclick="generate()" ondblclick="secret()">Generate Poem!</button>
+</body>
+</html>
